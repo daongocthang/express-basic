@@ -1,17 +1,18 @@
-$('form.search').submit(function (ev) {
+$('form.navbar-search').submit(function (ev) {
     ev.preventDefault();
-    console.log($('form.search'));
+    const data = $(this).serializeArray();
+    console.log(data);
 });
 
 $(function () {
-    $('.date-picker')
-        .datepicker({
-            format: 'dd-mm-yyyy',
-            autoclose: true,
-            todayHighlight: true,
-            disableTouchKeyboard: true,
-            keyboardNavigation: false,
-        })
-        .datepicker('update', new Date());
-    $('#startDate').datepicker('update', moment().subtract(3, 'months').toDate());
+    $('.dt-picker').datepicker({
+        format: 'dd-mm-yyyy',
+        autoclose: true,
+        todayHighlight: true,
+        disableTouchKeyboard: true,
+        keyboardNavigation: false,
+    });
+
+    $('.dt-3').datepicker('update', moment().subtract(3, 'months').toDate());
+    $('.dt-0').datepicker('update', moment().toDate());
 });

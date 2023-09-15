@@ -28,22 +28,22 @@
             </li>
         </ul>
 
-        <form class="form-inline my-2 my-lg-0 search">
+        <form class="form-inline my-2 my-lg-0 navbar-search" action="#">
             <div class="search-box">
                 <div class="form-group">
                     <i class="fa fa-search"></i>
-                    <input type="text" class="form-control" placeholder="Tìm kiếm ..." />
+                    <input type="text" class="form-control" placeholder="Tìm kiếm ..." name="value" />
                 </div>
 
                 <div class="form-group">
                     <i class="far fa-calendar-alt"></i>
-                    <input type="text" class="form-control text-center date-picker" id="startDate" />
+                    <input type="text" class="form-control text-center dt-picker dt-3" name="start" />
                 </div>
                 <div class="form-group">
                     <i class="far fa-calendar-alt"></i>
-                    <input type="text" class="form-control text-center date-picker" id="endDate" />
+                    <input type="text" class="form-control text-center dt-picker dt-0" name="end" />
                 </div>
-                <select name="column" id="column" class="custom-select">
+                <select class="custom-select" name="col">
                     <option value="receiptNo">Mã phiếu</option>
                     <option value="model">Tên TB</option>
                     <option value="serial" selected>Serial</option>
