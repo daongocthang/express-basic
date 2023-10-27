@@ -5,9 +5,11 @@
             "module-resolver",
             {
                 "alias": {
-                    "~": "./src/"
+                    "~": "./src"
                 }
             }
-        ]
-    ]
+        ],
+        ["@babel/plugin-transform-runtime"]
+    ],
+    "ignore": ["**/public/static"]
 }

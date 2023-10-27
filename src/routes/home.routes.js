@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
 const router = Router();
-export const Browser = (app) => {
+export default (app) => {
     router.get('/', (req, res) => {
-        res.render('pages/index', { title: 'welcome' });
+        res.send({ message: 'Welcome to ExpressJS' });
     });
 
     app.use('/', router);
